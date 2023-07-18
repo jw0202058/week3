@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './upload.css';
 import * as tmImage from '@teachablemachine/image';
 
 const ImagePrediction = () => {
@@ -40,8 +40,8 @@ const ImagePrediction = () => {
   };
 
   return (
-    <div>
-      <h2>File Upload & Image Preview</h2>
+    <div className='upload_header'>
+      <h2 style={{ color: 'white', fontSize: 50, marginBottom: 30, fontWeight: 'bold' }}>File Upload & Image Preview</h2>
       <input type="file" id="upload_file" onChange={handleImageUpload} />
       <br />
       {uploadedImage && (
@@ -50,7 +50,7 @@ const ImagePrediction = () => {
           <h1>이미지 업로드</h1>
         </div>
       )}
-      <div id="label-container">
+      <div id="label-container" style={{ color: 'white', marginTop: 0 }}>
         {predictions.length > 0 && (
           <>
             <h3>예측 결과:</h3>

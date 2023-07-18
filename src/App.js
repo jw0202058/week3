@@ -30,7 +30,7 @@ function Home() {
         <div className='start'>
           <Link
             className='start-text'
-            style={{ fontFamily: 'initial', fontWeight: 'bold', fontSize: 25 }}
+            style={{ fontFamily: 'initial', fontWeight: 'bold', fontSize: 25, textDecorationLine: 'underline', textDecorationThickness: 1}}
             to="selectSection"
             smooth={true}
             onClick={scrollToSelect}

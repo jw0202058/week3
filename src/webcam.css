@@ -1,8 +1,31 @@
-.header{
+.webcam_haeder{
+    background-color: black;
     display: flex;
     flex-direction: column;
-    width: 300px;
     align-items: center;
-    justify-content: center;
-    margin-left:800px
+    margin-top: 50px;
+}
+
+body{
+    background-color: black;
+}
+
+.hair{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px
+}
+
+.hair:hover{
+    text-shadow: 0px 0px 10px white;
+}
+
+.capture{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.capture:hover{
+    text-shadow: 0px 0px 10px white;
 }
