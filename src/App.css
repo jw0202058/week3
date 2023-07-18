@@ -1,5 +1,137 @@
-.App {
+.App-header {
   text-align: center;
+  background-color: black;
+}
+
+.appeal {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: inline-block;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: showing_appeal 1.5s steps(400) 0s forwards;
+}
+
+@keyframes showing_appeal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 46.7%;
+  }
+}
+
+.line{
+  border: solid 1px white;
+  height: 240px;
+}
+
+.name {
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  margin-top: 300px;
+  border: solid 1px white;
+}
+
+.main_img{
+  height: 222px;
+  width: 400px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+img{
+  margin-top: 10px;
+}
+
+.start{
+  margin-top: 170px;
+}
+
+.start > img {
+  animation: move-up-down 1s infinite alternate;
+}
+
+@keyframes move-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.select_img{
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  margin-bottom: 300px;
+}
+
+.camera:hover {
+  text-shadow: 0px 0px 10px white;
+}
+.gallery:hover {
+  text-shadow: 0px 0px 10px white;
+}
+
+.camera{
+  margin-right: 550px;
+}
+
+.caption{
+  animation: slideHead 2s forwards;
+}
+
+.head{
+  animation: slideCaption 2s forwards;
+}
+
+.gallery{
+  margin-left: 550px;
+}
+
+@keyframes slideHead {
+  from{
+    margin-left: -500px;
+    opacity: 0;
+  }
+  to{
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slideCaption {
+  from{
+    margin-right: -500px
+  }
+  to{
+    margin-right: 0px
+  }
+}
+
+@keyframes disappearCamera {
+  from{
+    margin-left: 0px;
+    opacity: 1;
+  }
+  to{
+    margin-left: -500px;
+    opacity: 0;
+  }
+  
 }
 
 .App-logo {
@@ -14,7 +146,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: black; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,6 +164,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
