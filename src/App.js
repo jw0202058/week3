@@ -4,6 +4,12 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 import { Link as Portal, BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import WebcamPage from './webcam';
 import Gallery from './upload';
+import OvalFileContents from './oval';
+import OblongFileContents from './oblong';
+import CircleFileContents from './circle';
+import SquareFileContents from './square';
+import HeartFileContents from './heart';
+import './App.css';
 
 function Home() {
   const [opacity, setOpacity] = useState(0);
@@ -15,7 +21,6 @@ function Home() {
     return () => clearTimeout(timer);
   }, [opacity]);
 
-
   const scrollToSelect = () => {
     scroll.scrollToBottom();
   };
@@ -25,7 +30,7 @@ function Home() {
       <header className="App-header">
         <Main></Main>
 
-        <h1 className='name' style={{ opacity, transition: 'opacity 2s' }}>dlfmaanjgwl</h1>
+        <h1 className='name' style={{ opacity, transition: 'opacity 3s', fontWeight: 'vold' }}>hAI.st</h1>
 
         <div className='start'>
           <Link
@@ -53,9 +58,13 @@ function Main() {
   return (
 
     <div className='main'>
-      <h1 className='appeal' style={{ color: "white" }}>
-        C H A N G E<br />Y O U R<br />S T Y L E
-      </h1>
+      <div className='appeal' style={{ color: "white", width: 414.5155, height: 242, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className='appeal_text'>
+        <span style={{fontSize: 40}}>C H A N G E</span>
+        <span style={{fontSize: 75, fontWeight: 'bolder'}}>YOUR</span>
+        <span style={{fontSize: 53}}>S T Y L E</span>
+        </div>
+      </div>
       <div className='line'></div>
       <img src="img/main.jpg" className='main_img'></img>
     </div>
@@ -68,10 +77,14 @@ function Select() {
 
   const GoToWebcam = () => {
     navigate('/webcam');
+    window.scrollTo(0, 0);
+
   };
 
   const GoToUpload = () => {
     navigate('/gallery');
+    window.scrollTo(0, 0);
+
   };
 
   const [scrollY, setScrollY] = useState(0);
@@ -119,6 +132,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/webcam" element={<WebcamPage />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/oval" element={<OvalFileContents />} />
+          <Route path="/oblong" element={<OblongFileContents />} />
+          <Route path="/circle" element={<CircleFileContents />} />
+          <Route path="/square" element={<SquareFileContents />} />
+          <Route path="/heart" element={<HeartFileContents />} />
         </Routes>
       </div>
   );

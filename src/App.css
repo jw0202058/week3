@@ -4,18 +4,17 @@
 }
 
 .appeal {
-  text-align: left;
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-top: 0;
+  
+  text-align: center;
   display: inline-block;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 70px;
+  /* font-size: 70px; */
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;
   white-space: nowrap;
   animation: showing_appeal 1.5s steps(400) 0s forwards;
+  
 }
 
 @keyframes showing_appeal {
@@ -33,23 +32,30 @@
 }
 
 .name {
-  margin-top: 10px;
+  margin-top: 0px;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 70px;
+}
+
+.appeal_text{
+  display: flex;
+  flex-direction: column;
 }
 
 .main{
   display: flex;
   flex-direction: row;
   margin-top: 300px;
-  border: solid 1px white;
+  /* border: solid 1px white;   */
+  width: 829.031px;
+  height: 242px;
 }
 
 .main_img{
   height: 222px;
-  width: 400px;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 350px;
+  margin-left: 50px;
 }
 
 img{
@@ -57,7 +63,7 @@ img{
 }
 
 .start{
-  margin-top: 170px;
+  margin-top: 150px;
 }
 
 .start:hover{
@@ -174,3 +180,25 @@ img{
     transform: rotate(360deg);
   }
 }
+
+/* about oval , oblong , circle , square , heart js files */
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* 갤러리 이미지 스타일 */
+.image-container {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.image-container img {
+  width: 200px; /* 이미지 크기를 조정하세요 */
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+

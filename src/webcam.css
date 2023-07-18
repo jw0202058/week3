@@ -1,31 +1,59 @@
-.webcam_haeder{
+.webcam_haeder {
     background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    color: white;
 }
 
-body{
+body {
     background-color: black;
 }
 
-.hair{
+.hair_cam {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0px
+    position: absolute;
+    margin-top: 800px;
 }
 
-.hair:hover{
+.hair_cam:hover {
     text-shadow: 0px 0px 10px white;
 }
 
-.capture{
+.hair_cam > img {
+    animation: move-up-down 1s infinite alternate;
+}
+
+@keyframes move-up-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.capture {
     margin-top: 10px;
     margin-bottom: 10px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
 }
 
-.capture:hover{
+.capture:hover {
     text-shadow: 0px 0px 10px white;
+}
+
+.letsgo:hover {
+    text-shadow: 0px 0px 10px white;
+
+}
+
+
+.result {
+    margin-top: 1000px;
 }
