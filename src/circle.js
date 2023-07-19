@@ -50,7 +50,7 @@ const CircleFileContents = () => {
                 <ImageSlider images={ImgFileNames} />
             </div>
             {/* <span>사진을 클릭해 보세요!</span> */}
-            <p className="explain" style={{textAlign:'left'}}>가로 세로 비율이 거의 비슷하며 둥근 형태를 가지고 있다<br/>
+            <p className="explain" style={{textAlign:'center'}}>가로 세로 비율이 거의 비슷하며 둥근 형태를 가지고 있다<br/>
             앞머리의 높은 볼륨과 뒷머리의 적당한 길이 조절이 가능한 포마드 및 리젠트<br/>
             얼굴 주변에 텍스처와 운동감을 추가하여 얼굴의 형태를 부각시키고, 가늘고 길쭉한 느낌을 주는 레이어드컷<br/>
             부피와 텍스처를 추가하여 둥근 얼굴을 완화시키고 세련된 느낌을 주는 웨이브<br/>

@@ -10,6 +10,7 @@ import CircleFileContents from './circle';
 import SquareFileContents from './square';
 import HeartFileContents from './heart';
 import './App.css';
+import { IoHomeOutline } from 'react-icons/io5';
 
 function Home() {
   const [opacity, setOpacity] = useState(0);
@@ -30,12 +31,12 @@ function Home() {
       <header className="App-header">
         <Main></Main>
 
-        <h1 className='name' style={{ opacity, transition: 'opacity 3s', fontWeight: 'vold' }}>hAI.st</h1>
+        <h1 className='name' style={{ opacity, transition: 'opacity 3s', fontWeight: 'vold', fontFamily:'serif' }}>p e r s o n a l H a i r</h1>
 
         <div className='start'>
           <Link
             className='start-text'
-            style={{ fontFamily: 'initial', fontWeight: 'bold', fontSize: 25, textDecorationLine: 'underline', textDecorationThickness: 1}}
+            style={{ fontFamily: 'NotoSerifKR-Medium', fontWeight: 'bold', fontSize: 25, textDecorationLine: 'underline', textDecorationThickness: 1}}
             to="selectSection"
             smooth={true}
             onClick={scrollToSelect}
@@ -66,7 +67,7 @@ function Main() {
         </div>
       </div>
       <div className='line'></div>
-      <img src="img/main.jpg" className='main_img'></img>
+      <img src="img/main.png" className='main_img'></img>
     </div>
 
   )
@@ -108,15 +109,15 @@ function Select() {
 
       <div className='camera' onClick={GoToWebcam}>
           <h1 className={headClassName}>C A M E R A</h1>
-        <span className={captionClassName}>카메라로 본인의 얼굴을 촬영해 보세요<br /></span>
+        <span className={captionClassName} style={{fontFamily: 'NotoSerifKR-Medium'}}>카메라로 본인의 얼굴을 촬영해 보세요<br /></span>
       </div>
 
       <br />
       <br />
 
       <div className='gallery' onClick={GoToUpload}>
-        <h1 className={headClassName}>G A L L E R Y</h1>
-        <span className={captionClassName}>본인의 얼굴형이 잘 보이는 사진을 선택해 주세요<br /></span>
+        <h1 className={headClassName} >G A L L E R Y</h1>
+        <span className={captionClassName} style={{fontFamily: 'NotoSerifKR-Medium'}}>본인의 얼굴형이 잘 보이는 사진을 선택해 주세요<br /></span>
 
         <br></br>
       </div>
@@ -127,8 +128,12 @@ function Select() {
 function App() {
 
   return (
-      <div>
-        <Routes>
+    <div>
+      <Portal to="/" className='Home_icon' style={{ color: 'white' } }>
+        <IoHomeOutline size={20} style={{ marginRight: 5 }} />
+
+      </Portal>
+      <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/webcam" element={<WebcamPage />} />
           <Route path="/gallery" element={<Gallery />} />

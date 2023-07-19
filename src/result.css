@@ -1,20 +1,27 @@
-.idol {
+.idol{
     /* margin-top: 200px; */
     /* border: solid 1px white; */
-    color: white;
+    color:white;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 0px;
+    font-family: 'NotoSerifKR-Medium';
 }
 
-.explain {
+.explain{
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'NotoSerifKR-Medium', sans-serif;
     font-weight: bold;
     word-spacing: 10px;
     line-height: 30px;
     border: solid 1px white;
     padding: 30px;
     margin: 100px;
-}
+    }
+
+    @font-face {
+        font-family: 'NotoSerifKR-Medium';
+        src: url('./font/NotoSerifKR-Medium.otf') format('opentype');
+        /* 추가적인 font-weight, font-style 등의 설정도 가능합니다. */
+      }

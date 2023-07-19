@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './upload.css';
 import * as tmImage from '@teachablemachine/image';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import DonutChart from './DonutChart';
+
 
 const ImagePrediction = () => {
   const [uploadedImage, setUploadedImage] = useState(null);
@@ -10,7 +12,6 @@ const ImagePrediction = () => {
   const [showResults, setShowResults] = useState(false); // 분석 결과 보기 텍스트를 보여줄 상태
 
   const navigate = useNavigate();
-  let num = -1;
   let sortedPredictions = [];
   useEffect(() => {
     if (showResults) {
@@ -53,19 +54,6 @@ const ImagePrediction = () => {
   const renderPredictions = () => {
     // predictions 배열을 prediction.probability를 기준으로 내림차순 정렬합니다.
     sortedPredictions = predictions.sort((a, b) => b.probability - a.probability);
-  
-    return sortedPredictions.map((prediction, index) => {
-      // prediction.probability가 0.5 이상이면서 아직 num이 -1인 경우에만 num에 현재 인덱스 값을 저장합니다.
-      if (prediction.probability >= 0.5 && num === -1) {
-        num = index;
-      }
-
-      return (
-        <div key={index}>
-          <p>{prediction.className}: {Math.round(prediction.probability * 100)}%</p>
-        </div>
-      );
-    });
   };
 
   const scrollToHair = () => {
@@ -100,7 +88,7 @@ const ImagePrediction = () => {
 
       <div className='hair' style={{ visibility: showResults ? 'visible' : 'hidden' }}>
         <Link
-          style={{ fontFamily: 'initial', fontWeight: 'bold', fontSize: 25, color: 'white', textDecorationLine: 'underline', textDecorationThickness: 1 }}
+          style={{ fontFamily: 'NotoSerifKR-Medium', fontWeight: 'bold', fontSize: 25, color: 'white', textDecorationLine: 'underline', textDecorationThickness: 1 }}
           to="selectSection"
           smooth={true}
           onClick={scrollToHair}
@@ -111,13 +99,19 @@ const ImagePrediction = () => {
         <img src="img/down_arrow.png" style={{ width: 30, height: 30 }}></img>
       </div>
 
-      <div id="label-container" className='result'>
+      <div id="label-container" className='result_'>
         {predictions.length > 0 && (
           <>
             {renderPredictions()}
+
+            {showResults && predictions.length > 0 && (
+              <div className='donut-chart_'>
+                <DonutChart data={sortedPredictions} />
+              </div>
+            )}
             {/* 'Let's go' 버튼을 누르면 goToFace 함수가 실행되어 페이지가 이동합니다. */}
             <div className='face' onClick={goToFace}>
-              <h1 className='letsgo' style={{textDecorationLine: 'underline', textDecorationThickness: 1}}>L E T' S   G O</h1>
+              <h1 className='letsgo_' style={{textDecorationLine: 'underline', textDecorationThickness: 1, fontFamily: 'NotoSerifKR-Medium'}}>Click!</h1>
               <br />
             </div>
           </>

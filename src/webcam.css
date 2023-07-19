@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
     color: white;
 }
 
@@ -53,7 +52,15 @@ body {
 
 }
 
-
 .result {
     margin-top: 1000px;
+}
+
+.donut-chart {
+    position: absolute;
+    margin-top: 1200px;
+}
+
+.letsgo {
+    margin-top: 100px;
 }
