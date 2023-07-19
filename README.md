@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# 💈 프로젝트명
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🧔‍♀️ 프로젝트 소개
+[react , teachable machine을 이용한 헤어스타일 추천 웹사이트]
 
-## Available Scripts
+## 🖱️ 팀원
+고려대 자유전공학부 컴퓨터학과 21학번 이정원
+카이스트 전산학부 19학번 이현수
 
-In the project directory, you can run:
+## 💻 개발환경
+- OS: Linux
+- Language: React.jsx
+- IDE: Visual Studio Code
 
-### `npm start`
+## 📁 상세 설명
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 0. Teachable Machine
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+// tm image
 
-### `npm test`
+- Oval, Oblong, Heart, Round, Square 다섯 가지의 얼굴형을 선정하고, 각각에 대한 얼굴형 사진 800개를 이용해 Teachable Machine에서 학습시켰다.
+- 사진의 출처는 다음과 같다.
+##### Github - https://github.com/NVlabs/ffhq-dataset
+##### Kaggle - https://www.kaggle.com/niten19/face-shape-dataset
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 1. Main page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+// main page image
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 주소를 통해 접속하면 위와 같은 화면이 나온다.
+- '시작하기'를 클릭하거나 아래로 스크롤하면 다음과 같이 'CAMERA'와 'GALLERY'를 선택할 수 있는 창으로 이동한다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+// choice image
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 2-1. CAMERA
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+// webcam image
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- 'CAMERA'를 선택하고 권한을 허용하면 위와 같이 webcam이 뜨고, capture을 누르면 3 , 2 , 1 카운트 이후에 webcam 화면을 캡쳐하고, 얼굴형을 분석한다.
+- 얼굴형 분석은 추출한 model과 tensorflow 라이브러리를 이용해서 진행했다.
+- 얼굴형 분석이 끝나면 '분석 결과 보기'가 생기고, 아래로 스크롤하거나 '분석 결과 보기'를 누르면 분석 결과 화면이 생성된다.
+- 분석 결과 화면은 (2-2. GALLERY) 이후에 따로 첨부하였다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 2-2. GALLERY
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+// gallery image
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 'GALLERY'를 선택하면 위와 같이 사진을 선택할 수 있다.
+- 얼굴형 분석이 끝나면 '분석 결과 보기'가 생기고, 아래로 스크롤하거나 '분석 결과 보기'를 누르면 분석 결과 화면이 생성된다.
 
-### Code Splitting
+### Result
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+//result image
 
-### Analyzing the Bundle Size
+- 분석 결과 화면에서 '~'를 누르면 분석 결과에 적합한 헤어스타일을 추천해주는 창이 뜬다.
+- 한 종류의 얼굴형에 대해 50% 이상 적합하다는 결과가 나오면, 그에 맞는 헤어스타일 추천 창으로 이동한다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 3. Recommend
 
-### Making a Progressive Web App
+// recomend image
+<img src = "https://github.com/CampProject2/mouse/assets/135544903/56cdc83b-5b4c-43bf-a3a1-d6d766443ffa" height ="400" weight = "800"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- 위와 같이 5가지 종류의 얼굴형에 맞는 헤어스타일이 나열되고, 어떤 느낌의 헤어스타일이 어울리는지에 대한 설명글이 생성된다.
+- 헤어스타일 추천에 대한 출처는 다음과 같다.
+##### https://dsu.dcollection.net/public_resource/pdf/000001674180_20230719114753.pdf
+###### - 얼굴형의 특성을 보완한 헤어스타일 연구 ( 주연빈 , 2014 , 동신대학교 )
+##### https://scienceon.kisti.re.kr/commons/util/originalView.do?cn=CFKO200633239304979&oCn=NPAP08170196&dbt=CFKO&journal=NPRO00290786
+###### - 얼굴형에 따른 헤어스타일 연출 제한 ( 임지영 , 2006 , 동명대학 )
+##### https://brunch.co.kr/@miracle205/83
+##### https://brunch.co.kr/@miracle205/82
 
-### Advanced Configuration
+- 각 사진 위에 커서를 올리면 머리 종류가 나온다.
+- 사진을 클릭하면, 그에 맞는 헤어 스타일링 유튜브 영상이 나온다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
