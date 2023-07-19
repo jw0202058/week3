@@ -28,7 +28,7 @@
 
 ## 1. Main page
 
-<img width="1250" alt="mainpage" src="https://github.com/jw0202058/week3/assets/92250113/d5cca464-d00e-4790-b1f4-013cf2cfea0d">
+<img width="1224" alt="mainpage" src="https://github.com/jw0202058/week3/assets/92250113/a5375653-1917-40f9-b7fc-4c1104f7f988">
 
 - 주소를 통해 접속하면 위와 같은 화면이 나온다.
 - '시작하기'를 클릭하거나 아래로 스크롤하면 다음과 같이 'CAMERA'와 'GALLERY'를 선택할 수 있는 창으로 이동한다.
