@@ -27,7 +27,7 @@ const OblongFileContents = () => {
         {
             img: 'short.png',
             youtubeLink: 'https://youtube.com/shorts/oJ0lzIlfWVA?feature=share', // s.단발
-            description: '단발'
+            description: '숏단발'
         },
         {
             img: 'wave.png',

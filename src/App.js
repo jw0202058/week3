@@ -31,7 +31,7 @@ function Home() {
       <header className="App-header">
         <Main></Main>
 
-        <h1 className='name' style={{ opacity, transition: 'opacity 3s', fontWeight: 'vold', fontFamily:'serif' }}>p e r s o n a l H a i r</h1>
+        <h1 className='name' style={{ opacity, transition: 'opacity 3s', fontWeight: 'vold', fontFamily:'serif' }}>p e r s o n A l h a i r</h1>
 
         <div className='start'>
           <Link
