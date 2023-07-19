@@ -12,11 +12,11 @@ const DonutChart = ({ data }) => {
       {
         data: data.map(prediction => Math.round(prediction.probability * 100)),
         backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#FF9800',
-          '#4CAF50',
+          '#B0C4DE',
+          '#D8BFD8',
+          '#F5F5DC',
+          '#FFF5EE',
+          '#FFFFFF',
         ],
       },
     ],
@@ -75,7 +75,12 @@ const DonutChart = ({ data }) => {
 
       {/* 오른쪽에 색상 정보 */}
       <div style={{ marginLeft: '100px' }}>
-        {/* 오른쪽 색상 정보 표시 코드 생략 */}
+        {data.map((prediction, index) => (
+          <div key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
+            <div style={{ width: '12px', height: '12px', backgroundColor: prediction.backgroundColor, marginRight: '5px' }}></div>
+            <span style={{ color: 'white', fontSize: '20px' }}>{prediction.className} : {Math.round(prediction.probability * 100)}%</span>
+          </div>
+        ))}
       </div>
     </div>
   );
