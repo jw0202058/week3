@@ -57,9 +57,9 @@
 
 ### Result
 
-<img width="656" alt="result" src="https://github.com/jw0202058/week3/assets/92250113/86ed26e2-b603-4fd8-9632-63d8fcaa6e1c">
+<img width="1181" alt="result" src="https://github.com/jw0202058/week3/assets/92250113/7a7e15e6-453b-46df-8849-02453925d6a0">
 
-- 분석 결과 화면에서 '~'를 누르면 분석 결과에 적합한 헤어스타일을 추천해주는 창이 뜬다.
+- 분석 결과 화면에서 'click'를 누르면 분석 결과에 적합한 헤어스타일을 추천해주는 창이 뜬다.
 - 한 종류의 얼굴형에 대해 50% 이상 적합하다는 결과가 나오면, 그에 맞는 헤어스타일 추천 창으로 이동한다.
 
 
