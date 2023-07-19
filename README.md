@@ -1,4 +1,4 @@
-# 📏 프로젝트명
+# 📏 personAlhair
 
 ## 💈 프로젝트 소개
 [react , teachable machine을 이용한 헤어스타일 추천 웹사이트]
